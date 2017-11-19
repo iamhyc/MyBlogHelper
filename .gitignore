@@ -1,0 +1,10 @@
+# Exclude Source files
+_*
+*.html
+about.md
+index.md
+
+# Exclude mediate files
+Gemfile.lock
+.sass-cache
+.jekyll-metadata
