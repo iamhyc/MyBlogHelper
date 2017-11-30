@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cd .. && bundle exec jekyll serve
+cd ..
+bundle exec jekyll serve

@@ -6,13 +6,13 @@
 
 * Routing: 
 
-  ```
+  ```jade
   	{{ "route-path" | relative_url | absolute_url}}
   ```
 
 * Date object:
 
-  ```
+  ```jade
   {{ site.time | date_to_xmlschema }}        ---   2008-11-07T13:07:54-08:00
   {{ site.time | date_to_rfc822 }}           ---   Mon, 07 Nov 2008 13:07:54 -0800
   {{ site.time | date_to_string }}           ---   07 Nov 2008
@@ -21,13 +21,13 @@
 
 * Escape
 
-  ```
+  ```jade
   {{ "http://foo.com/?q=foo, \bar?" | uri_escape }}
   ```
 
 * Utility
 
-  ```
+  ```jade
   {{ page.content | number_of_words }}
   	Count the number of words in some text.
   	
@@ -41,7 +41,53 @@
   	Convert "quotes" into “smart quotes.”
   ```
 
+* Post Object
+
+  ```jade
+  post in site.posts
+  	post.url
+  	post.title
+  	post.excerpt # the first paragraph
+  ```
+
+* Site Object
+
+  ```jade
+  site.time
+  site.pages # all pages
+  site.ports # in reverse time order
+  site.data # loaded from /_data
+  ```
+
+* Page Object
+
+  ```jade
+  page.content
+  page.title
+  page.url
+  page.date
+  page.id
+  ```
+
+  ​
 
 
-### Jekyll's data files
+### Jekyll Font matter
+
+```yaml
+---
+# Predefined Global Variables
+layout: default
+permalink: /custom-path/title.html # only for post URLs
+published: True # False for not pulish
+# Custom Varaibles
+title: page_title # access via {{page.title}}
+# predefined Variables for Posts
+data: YYYY-MM-DD HH:MM:SS # overide the post date
+categories: custom-category # YAML list
+tags: my-tag # YAML list
+---
+```
+
+
 

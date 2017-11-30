@@ -1,7 +1,7 @@
 
 cd ..
-start jekyll build
-cd _site
+call jekyll build
+cd github-pages
 pause
 git add .
 git commit -m "Publish: %Date% %Time:~0,5%"
