@@ -5,6 +5,8 @@
 @echo WARNING: Workspace Init
 pause
 
+cd scripts && npm install && cd ..
+
 cd ..
 start git clone https://github.com/%BLOG_OWNER%/%BLOG_OWNER%.github.io github-pages
 

@@ -2,6 +2,6 @@
 @echo off
 
 cd scripts
-call node auto-publish.js
+call node website-archieve.js
 cd ..
 pause
