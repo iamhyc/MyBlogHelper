@@ -55,8 +55,14 @@
   ```jade
   site.time
   site.pages # all pages
-  site.ports # in reverse time order
+  site.posts # in reverse time order
   site.data # loaded from /_data
+  site.static_files
+  	- file.path
+  	- file.modified_time
+  	- file.name
+  	- file.basename
+  	- file.extname
   ```
 
 * Page Object

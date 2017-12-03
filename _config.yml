@@ -16,17 +16,21 @@
 title: Tabi and Way
 email: sudofree@163.com
 description: >- # this means to ignore newlines until "baseurl:"
-  It will appear in your document head meta (for Google search results) and 
-  in your feed.xml site description.
+  Communication Engineering and Computer Science consist the content
+  of this blog.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://iamhyc.github.io" # the base hostname & protocol for your site
-keyword: SUSTech
+keyword: sudo_free
 twitter_username: iamhyc
 github_username:  iamhyc
 
 # Global Configuration
-source: website
-destination: github-pages
+source: ./website
+includes_dir: ./website/_includes
+layouts_dir: ./website/_layouts
+plugins_dir: ./website/_plugins
+data_dir: ./website/_data
+destination: ./github-pages
 safe: True
 timezone: Asia/Shanghai
 encoding: utf-8
@@ -36,6 +40,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
