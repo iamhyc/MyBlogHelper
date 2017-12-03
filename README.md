@@ -10,11 +10,11 @@ This is a node.js driven localhost server, for auto generation and updating (hel
 ### Installation
 
 1. have your own github page repo;
-2. clone/download this repo, and unarchieve any where you like;
-3. run  in `batch/init-ws.bat`;
+2. clone/download this repo, and unarchieve anywhere you like;
+3. run `batch/init-ws.bat`;
 4. modify the personal information in `_config.yml`;
-5. personalize your blog style in `website`, and run `batch/run-server` to see how it works;
-6. run `batch/auto-publish` to publish your website online.
+5. personalize your blog theme in `website`, and run `batch/run-server.bat` to see how it works;
+6. run `batch/auto-publish.bat` to publish your website online.
 
 ### Funcitons
 
