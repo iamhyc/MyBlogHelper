@@ -1,27 +1,30 @@
 
 
-const { exec } = require('child_process')
+const { exec } = require('child_process');
+const fs = require('fs');
+const readlineSync = require('readline-sync');
 
 function errorLog(error, stdout, stderr)
 {
-	if(stderr)
+	if(error)
 	{
+    console.log(error)
 		console.log(stderr);
 	}
 }
 
-exec(`jekyll build`, {
-  cwd: '../../'
-  }, errorLog);
+console.log("====== Auto Publish Script ======")
 
-exec(`git add .`, {
-  cwd: '../../github-pages'
-  }, errorLog);
+pub_time = '' + new Date();
+pub_time = pub_time.slice(0, pub_time.lastIndexOf(' '));
 
-exec(`git commit -m "Publish: %Date% %Time:~0,5%"`, {
-  cwd: '../../github-pages'
-  }, errorLog);
+comments = "Publish: " + pub_time
 
-exec(`git push origin master`, {
-  cwd: '../../github-pages'
-  }, errorLog);
+do{
+  tmp = ''
+  tmp = readlineSync.question('Anything else? ', );
+  comments += '\n' + tmp
+}while(tmp!='');
+
+console.log(comments)
+fs.writeFileSync('../../github-pages/.tmpfile', comments, 'utf8');

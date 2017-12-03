@@ -4,8 +4,9 @@ const { exec } = require('child_process')
 const readlineSync = require('readline-sync');
 
 var pass1, pass2;
+var verified = false;
 
-verified = false;
+console.log("==== Website Archieve Script ====")
 
 while(!verified)
 {
@@ -22,7 +23,7 @@ while(!verified)
   }
 }
 
-const cmd = `7z a -t7z ./website.7z ./website/* -p${pass1}`
+const cmd = `7z a -t7z ./github-pages/website.7z ./website/* -p${pass1}`
 
 exec(cmd, {
   cwd: '../../'
@@ -30,5 +31,5 @@ exec(cmd, {
     if(stderr)
       console.log(stderr)
     else
-      console.log("Successful.")
+      console.log("Archieved.")
   });
