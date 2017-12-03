@@ -1,4 +1,4 @@
-#!/bin/bash
 
-cd ..
-bundle exec jekyll serve
+@cd ..
+@call bundle exec jekyll serve
+@cd batch
