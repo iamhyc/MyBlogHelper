@@ -11,7 +11,7 @@ pause
 
 call ./website-archieve.bat
 
-cd scripts
+cd ../scripts
 call node auto-publish.js
 cd %p%
 

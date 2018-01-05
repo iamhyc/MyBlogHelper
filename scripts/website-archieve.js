@@ -26,7 +26,7 @@ while(!verified)
 const cmd = `7z a -t7z ./github-pages/website.7z ./website/* -p${pass1}`
 
 exec(cmd, {
-  cwd: '../../'
+  cwd: '../'
   }, (error, stdout, stderr)=>{
     if(stderr)
       console.log(stderr)

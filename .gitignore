@@ -1,11 +1,13 @@
 # Exclude Source files
 website/
 github-pages/
+node_modules
 
 # Exclude mediate files
 Gemfile.lock
 .sass-cache
 .jekyll-metadata
+package-lock.json
 
 # Include specific file
 ! _config.yml

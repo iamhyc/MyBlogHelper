@@ -1,7 +1,9 @@
 
 @echo off
+set p=
+set p=%cd%
 
-cd scripts
+cd ../scripts
 call node website-archieve.js
-cd ..
+cd %p%
 pause

@@ -27,4 +27,4 @@ do{
 }while(tmp!='');
 
 console.log(comments)
-fs.writeFileSync('../../github-pages/.tmpfile', comments, 'utf8');
+fs.writeFileSync('../github-pages/.tmpfile', comments, 'utf8');
